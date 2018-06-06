@@ -6,41 +6,43 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="images/adventure-time.png"/>
-
+    <img src="images/adventure-time.png"/>  
+    <div class = "questions" >
         <form name="question1">
-        <h2>Question 1: blablabla ?</h2>
+        <h2>1. What is your favorite animal ?</h2>
         <ul>
-            <li><input type="radio" name="character" class="Finn" id="Finn"><label for="Finn">Finn</label></li>
-            <li><input type="radio" name="character" class="Jake"  id="Jake"><label for="Jake">Jake</label></li>
-            <li><input type="radio" name="character" class="PB" id="PB"><label for="PB">Princess Bubblegum</label></li>
-            <li><input type="radio" name="character" class="LG" id="LG"><label for="LG">Earl Lemongrab</label></li>
+            <li><input type="radio" name="character" class="Finn" id="Finn"  value="Finn" ><label for="Finn">Dog</label></li>
+            <li><input type="radio" name="character" class="Jake"  id="Jake"  ><label for="Jake" >Unicorn</label></li>
+            <li><input type="radio" name="character" class="PB" id="PB"  ><label for="PB">Giant hawk that carries you on his back</label></li>
+            <li><input type="radio" name="character" class="LG" id="LG"  ><label for="LG">I don't like animals</label></li>
         </ul>
     </form>
 
 
 
         <form name="question2">
-        <h2>Question 1: blablabla ?</h2>
+        <h2>2. Pick the best breakfast out of the following:</h2>
         <ul>
-            <li><input type="radio" name="character" class="LG" id="LG1"><label for="LG1">Earl Lemongrab</label></li>
-            <li><input type="radio" name="character" class="Finn" id="Finn1"><label for="Finn1">Finn</label></li>
-            <li><input type="radio" name="character" class="PB" id="PB1"><label for="PB1">Princess Bubblegum</label></li>
-            <li><input type="radio" name="character" class="Jake"  id="Jake1"><label for="Jake1">Jake</label></li>           
+            <li><input type="radio" name="character" class="LG" id="LG1"  ><label for="LG1">Candy</label></li>
+            <li><input type="radio" name="character" class="Finn" id="Finn1"  ><label for="Finn1">A perfect sandwich</label></li>
+            <li><input type="radio" name="character" class="PB" id="PB1"  ><label for="PB1">Cereal</label></li>
+            <li><input type="radio" name="character" class="Jake"  id="Jake1"  ><label for="Jake1">Bacon pancakes</label></li>           
         </ul>
     </form>
   
 
         <form name="question3">
-        <h2>Question 1: blablabla ?</h2>
+        <h2>3. Pick a quality for your best friend:</h2>
        
-        <li><input type="radio" name="character" class="Finn"  id="Finn2"><label for="Finn2">Finn</label></li>
-        <li><input type="radio" name="character" class="Jake" id="Jake2"><label for="Jake2">Jake</label></li>
-        <li><input type="radio" name="character" class="PB" id="PB2"><label for="PB2">Princess Bubblegum</label></li>
-        <li><input type="radio" name="character" class="LG" id="LG2" ><label for="LG2">Earl Lemongrab</label></li>
+        <li><input type="radio" name="character" class="Finn"  id="Finn2"  ><label for="Finn2">Funny</label></li>
+        <li><input type="radio" name="character" class="Jake" id="Jake2"  ><label for="Jake2">Heroic</label></li>
+        <li><input type="radio" name="character" class="PB" id="PB2"  ><label for="PB2" >He/she is a rockstar!</label></li>
+        <li><input type="radio" name="character" class="LG" id="LG2"  ><label for="LG2">He/she is like me but not as cool </label></li>
     </form>
+    </div> 
 
-    <a href="result.html"><button class = "btn submit">Submit</button></a>
+    <button id ="clickMe" class = "btn submit" onclick="countAnswer()">Submit</button>
+    <p id="result"></p>
 
 
 
