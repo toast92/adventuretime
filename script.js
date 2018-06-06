@@ -47,5 +47,5 @@ function countAnswer(){
     questionContainer.classList.add('Hidden');
 
     //Show the result.
-    document.getElementById("result").innerHTML =`Congrats! Your character is ${yourCharacter} with a score of ${highestScore}`; 
+    document.getElementById("result").innerHTML =`Congrats! Your character is <span class="highlight">${yourCharacter}</span> with a score of <span class="highlight">${highestScore}</span>`; 
 };
