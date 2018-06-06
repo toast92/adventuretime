@@ -36,16 +36,16 @@ function countAnswer(){
         if(answers[key] > highestScore){
             highestScore = answers[key];
 
-    //The variable yourCharacter is used in displaying the result of the quiz.//
+    //The variable yourCharacter is used in displaying the result of the quiz.
 
             yourCharacter = key;
         };
     });
 
-    //with this line we make sure the result of this function is displayed where we want.
-    
-    document.getElementById("result").innerHTML =`Congrats! Your character is ${yourCharacter} with a score of ${highestScore}`;
-    
+    //Hide the questions as they are no longer needed.
+    const questionContainer = document.getElementsByClassName('questions')[0];
+    questionContainer.classList.add('Hidden');
+
+    //Show the result.
+    document.getElementById("result").innerHTML =`Congrats! Your character is ${yourCharacter} with a score of ${highestScore}`; 
 };
-
-
