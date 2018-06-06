@@ -5,7 +5,7 @@ let answers = {};
 function countAnswer(){
     
     let highestScore = 0;
-    let yourCharacter = 'We dont know :(';
+    let yourCharacter = '';
 
     //create an object to store all the characters and their scores.
     answers = {
@@ -47,5 +47,10 @@ function countAnswer(){
     questionContainer.classList.add('Hidden');
 
     //Show the result.
-    document.getElementById("result").innerHTML =`Congrats! Your character is <span class="highlight">${yourCharacter}</span> with a score of <span class="highlight">${highestScore}</span>`; 
+    if(highestScore > 0){
+        document.getElementById("result").innerHTML =`Congrats! Your character is <span class="highlight">${yourCharacter}</span> with a score of <span class="highlight">${highestScore}</span>`; 
+    }
+    else{
+        document.getElementById("result").innerHTML = 'We dont know who your character is as you didnt fill in any questioms :( please click on the logo to get back to the questions.'; 
+    }
 };
