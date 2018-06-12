@@ -63,10 +63,5 @@ function countAnswer(){
         document.getElementById("result").innerHTML = 'We dont know who your character is as you did not fill in any answers :( please click on the logo to get back to the questions.'; 
     }
 
-    
-
-  
-    
-    
 };
 
