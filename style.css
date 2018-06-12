@@ -10,6 +10,12 @@ body{
 .Container{
     max-width: 1024px;
     margin: 0 auto;
+    color: #445857;
+    font-weight: 500;
+}
+
+.container h2{
+    color: #b33232;
 }
 
 h2{
@@ -55,4 +61,13 @@ button:hover{
 .highlight{
     text-decoration: underline;
     font-weight: 600;
+}
+
+.hidden{
+    display: none;
+}
+
+.character{
+    max-width: 40rem;
+    margin-top: 2rem;
 }

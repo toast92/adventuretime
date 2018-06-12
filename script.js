@@ -7,6 +7,14 @@ function countAnswer(){
     let highestScore = 0;
     let yourCharacter = '';
 
+    //create an object to store all the characters' pictures.
+    let pictures = {
+        Finn: document.getElementById("scoreFinn"),
+        Jake: document.getElementById("scoreJake"),
+        PB: document.getElementById("scorePB"),
+        LG: document.getElementById("scoreLG")
+    };
+
     //create an object to store all the characters and their scores.
     answers = {
         Finn: 0,
@@ -49,8 +57,16 @@ function countAnswer(){
     //Show the result.
     if(highestScore > 0){
         document.getElementById("result").innerHTML =`Congrats! Your character is <span class="highlight">${yourCharacter}</span> with a score of <span class="highlight">${highestScore}</span>`; 
+        pictures[yourCharacter].classList.remove("hidden");
     }
     else{
-        document.getElementById("result").innerHTML = 'We dont know who your character is as you didnt fill in any questioms :( please click on the logo to get back to the questions.'; 
+        document.getElementById("result").innerHTML = 'We dont know who your character is as you did not fill in any answers :( please click on the logo to get back to the questions.'; 
     }
+
+    
+
+  
+    
+    
 };
+

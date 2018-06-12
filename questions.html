@@ -21,8 +21,6 @@
                 </ul>
                 </form>
     
-    
-    
             <form name="question2">
                 <h2>2. Pick the best breakfast out of the following:</h2>
                 <ul>
@@ -83,10 +81,13 @@
                     <li><input type="radio" name="character" class="LG" id="LG6"  ><label for="LG6">Nothing. I don't need anything.</label></li>
                 </ul>
             </form>
-    
-            <button id ="clickMe" class = "btn submit" onclick="countAnswer()">Submit</button>
+            <button id ="clickMe" class = "btn submit" onclick="countAnswer()" onclick="showImage()">Submit</button>
         </div>
         <h2 id="result"></h2>
+        <img id="scoreFinn" class="hidden character" src="images/Finn.png"/>
+        <img id="scoreJake" class="hidden character" src="images/jake.jpg"/>
+        <img id="scorePB" class="hidden character" src="images/PB.jpg"/>
+        <img id="scoreLG" class="hidden character" src="images/LG.jpg"/>
     </div>
 <script src="script.js"></script>
 </body>
