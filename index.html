@@ -6,6 +6,7 @@
     <title>Adventure Time</title>
     <link href="https://fonts.googleapis.com/css?family=Jua|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div class="Container">
@@ -90,11 +91,13 @@
         </div>
 
             <h2 id="result"></h2>
-            <img id="scoreFinn" class="hidden character" src="images/Finn.png"/>
-            <img id="scoreJake" class="hidden character" src="images/jake.jpg"/>
-            <img id="scorePB" class="hidden character" src="images/PB.jpg"/>
-            <img id="scoreLG" class="hidden character" src="images/LG.jpg"/>
-            <a href = "index.html"><button id="retakeQuiz" class="btn hidden">Restart Quiz</button></a>
+            <div class="imageContainer">
+                <img id="scoreFinn" class="hidden character" src="images/Finn.png"/>
+                <img id="scoreJake" class="hidden character" src="images/jake.jpg"/>
+                <img id="scorePB" class="hidden character" src="images/PB.jpg"/>
+                <img id="scoreLG" class="hidden character" src="images/LG.jpg"/>
+            </div>
+            <a href = "/"><button id="retakeQuiz" class="btn hidden">Restart Quiz</button></a>
         
     </div>
 <script src="script.js"></script>

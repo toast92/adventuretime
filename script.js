@@ -60,13 +60,14 @@ function countAnswer(){
     const questionContainer = document.getElementById('questions');
     questionContainer.classList.add('hidden');
 
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     //Show the result.
     if(highestScore > 0){
         document.getElementById("result").innerHTML =`Congrats! Your character is <span class="highlight">${yourCharacter}</span> with a score of <span class="highlight">${highestScore}</span>`; 
         pictures[yourCharacter].classList.remove("hidden");
     }
     else{
-        document.getElementById("result").innerHTML = 'We dont know who your character is as you did not fill in any answers :( please click on the logo to get back to the questions.'; 
+        document.getElementById("result").innerHTML = 'We dont know who your character is as you did not fill in any answers :( please click on the button below to get back to the start.'; 
     }
 
     document.getElementById('result').classList.remove('hidden');

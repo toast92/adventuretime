@@ -76,3 +76,29 @@ a button{
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
+
+@media screen and (max-width: 582px) and (min-width: 415px) {
+    a img{
+        max-width: 25rem;
+    }
+    }
+
+    .character{
+        max-width: 30rem;
+    }
+
+@media screen and (max-width: 415px){
+    a img{
+        max-width: 25rem;
+    }
+    button{
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+    }
+    h2{
+        font-size: 1.3rem;                
+    }
+    .character{
+        max-width: 20rem;
+    }
+}
