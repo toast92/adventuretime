@@ -31,7 +31,7 @@ These values are updated by looping over the array of selected radio buttons, re
 
  I decided to add pictures to the results so the user can easily put a face to the name. Popular websites with quizzes (*cough* BuzzFeed *cough*) usually add this detail and honestly I like it and wanted to have it for my quiz too. My first activity was to find some appropriate pictures of the characters in the quiz. After that I added all the pics to my html document and using CSS I made them hidden. After that, how to unhide them depending on the end result? I created an object to store all these images for easy reference. So, as the noob that I am I started writing a super long if/else statement that worked only if there was a valid result, and that wasn't a good solution. 
 
- After thinking some more, looking through my code and having a short yet pleasant discussion with my boyfriend I noticed I could just make use of naming the properties of my new "pictures" object the same as the one for my "answers" object and then just return the key.
+ After thinking some more, looking through my code and having a short yet pleasant discussion with my boyfriend I noticed the following: I named the properties of the object "pictures" the same as the properties for the object "answers" ---> Finn, Jake, PB and LG. The variable yourCharacter contains the name of the result --> Finn, Jake, PB or LG, thus using pictures[yourCharacter] will display the picture associated with it. 
 
  ## Launch 3.0
 
