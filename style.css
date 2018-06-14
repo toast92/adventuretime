@@ -67,3 +67,12 @@ button:hover{
     max-width: 40rem;
     margin-top: 2rem;
 }
+
+#result{
+    color: #b33232;
+}
+
+a button{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}

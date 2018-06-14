@@ -1,9 +1,15 @@
-let answers = {};
+function showQuestions(){
+
+    document.getElementById('questions').classList.remove('hidden');
+    document.getElementById('intro').classList.add('hidden');
+
+}
 
 //created a function that calculates the highest number of answers checked and returns the name of the character with the highest number of answers checked.//
 
 function countAnswer(){
     
+    let answers = {};
     let highestScore = 0;
     let yourCharacter = '';
 
@@ -22,7 +28,7 @@ function countAnswer(){
         PB: 0,
         LG: 0
     };
-    
+
     //variable to hold all the checked radio buttons so we can loop over them.
     let radios = document.querySelectorAll('input[type=radio]:checked');
     
@@ -49,10 +55,10 @@ function countAnswer(){
             yourCharacter = key;
         };
     });
-
+    
     //Hide the questions as they are no longer needed.
-    const questionContainer = document.getElementsByClassName('questions')[0];
-    questionContainer.classList.add('Hidden');
+    const questionContainer = document.getElementById('questions');
+    questionContainer.classList.add('hidden');
 
     //Show the result.
     if(highestScore > 0){
@@ -63,5 +69,10 @@ function countAnswer(){
         document.getElementById("result").innerHTML = 'We dont know who your character is as you did not fill in any answers :( please click on the logo to get back to the questions.'; 
     }
 
+    document.getElementById('result').classList.remove('hidden');
+    document.getElementById('retakeQuiz').classList.remove('hidden');
 };
+
+
+
 
