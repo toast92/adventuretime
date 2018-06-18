@@ -1,8 +1,6 @@
 function showQuestions(){
-
     document.getElementById('questions').classList.remove('hidden');
     document.getElementById('intro').classList.add('hidden');
-
 }
 
 //created a function that calculates the highest number of answers checked and returns the name of the character with the highest number of answers checked.//
@@ -35,7 +33,6 @@ function countAnswer(){
     //All the selected answers are being stored and the forEach function returns all these elements (with the input type radio who are also checked) and then it executes the function with a parameter of radioButton for each of them => 
 
     radios.forEach(function(radioButton){
-
     // what the function does is add +1 to the value of a key of the object answers depending on the className of the checked button.
 
     answers[radioButton.className]++;
