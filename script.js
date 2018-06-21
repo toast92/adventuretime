@@ -16,7 +16,9 @@ function countAnswer(){
         Finn: document.getElementById("scoreFinn"),
         Jake: document.getElementById("scoreJake"),
         PB: document.getElementById("scorePB"),
-        LG: document.getElementById("scoreLG")
+        LG: document.getElementById("scoreLG"),
+        noScoreYet: document.getElementById("notEnoughAnswers"),
+        noScore: document.getElementById("noAnswers")
     };
 
     //create an object to store all the characters and their scores.
@@ -26,16 +28,14 @@ function countAnswer(){
         PB: 0,
         LG: 0
     };
-
+    
     //variable to hold all the checked radio buttons so we can loop over them.
     let radios = document.querySelectorAll('input[type=radio]:checked');
-    
     //All the selected answers are being stored and the forEach function returns all these elements (with the input type radio who are also checked) and then it executes the function with a parameter of radioButton for each of them => 
 
     radios.forEach(function(radioButton){
     // what the function does is add +1 to the value of a key of the object answers depending on the className of the checked button.
-
-    answers[radioButton.className]++;
+        answers[radioButton.className]++;
     });
     
     //Now we have the object {answers} with its final values. We loop over the keys, then we execute the function for each of them. //  
@@ -59,12 +59,18 @@ function countAnswer(){
 
     document.body.scrollTop = document.documentElement.scrollTop = 0;
     //Show the result.
-    if(highestScore > 0){
+    if(highestScore > 0 && radios.length == 7){
         document.getElementById("result").innerHTML =`Congrats! Your character is <span class="highlight">${yourCharacter}</span> with a score of <span class="highlight">${highestScore}</span>`; 
         pictures[yourCharacter].classList.remove("hidden");
     }
+    else if(highestScore > 0 && radios.length > 0 && radios.length < 7){
+        document.getElementById("result").innerHTML = 'Secret! But once you fill in all of the answers it shall be revealed *low bow*';
+        pictures.noScoreYet.classList.remove("hidden");
+    }
+
     else{
-        document.getElementById("result").innerHTML = 'We dont know who your character is as you did not fill in any answers :( please click on the button below to get back to the start.'; 
+        document.getElementById("result").innerHTML = 'We dont know who your character is as you did not fill in any of the answers :( please click on the button below to get back to the start.';
+        pictures.noScore.classList.remove("hidden");
     }
 
     document.getElementById('result').classList.remove('hidden');

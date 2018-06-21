@@ -40,6 +40,14 @@ ul li:hover{
     font-weight: 600;
 }
 
+ul li input{
+    cursor: pointer;
+}
+
+ul li input + label{
+    cursor: pointer;
+}
+
 input[type=radio]:checked + label {
     font-weight: 600;
   } 
