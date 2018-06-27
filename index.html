@@ -1,6 +1,17 @@
 <html lang="en">
 <head>
-    <script src="gtag.js"></script>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-121192155-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,7 +25,8 @@
         <a href="/"><img src="images/adventure-time.png"/></a>    
         <div id="intro">
             <h2>Find out which Adventure Time character you are!</h2>
-            <button class="btn start" onclick="showQuestions()">Start</button>
+            <button class="btn start" onClick="showQuestions(); ga('send', 'event', 'Button', 'click', 'Start Quiz');">Start</button>
+            
         </div>
         
         <div id="questions" class="hidden">
